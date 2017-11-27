@@ -41,8 +41,17 @@ You can reproduce the colored log demo by running  `mvn clean install`  and then
 Uncomment the desired logging of the main method and corresponding [tinylog.properties](https://github.com/tobiasrm/tinylog-tagging-filewriter/blob/master/src/main/resources/tinylog.properties) config for the listed example. 
  
 ## Maven artifact
-*In preparation*
+Add the following dependency to your pom.xml to use the tinylog-tagging-filewriter in your Maven project:
 
+```
+<dependency>
+	<groupId>com.github.tobiasrm</groupId>
+	<artifactId>tinylog-tagging-filewriter</artifactId>
+	<version>1.3.1</version>
+</dependency>
+```
+
+Note: To make sure your IDE takes all files into account (notably the TaggingFileWriter class), clean and rebuild your project.
 
 ## Comments
 - **Versioning**. The versioning uses the original Tinylog versions for clarity about the underlying libary, e.g. tinylog-tagging-filewriter in version 1.3.1 uses Tinylog v1.3.1 (see [pom.xml](https://github.com/tobiasrm/tinylog-tagging-filewriter/blob/master/pom.xml)). If needed, you may simply exclude it and use another Tinylog version.
