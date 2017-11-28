@@ -1,12 +1,12 @@
-# Tinylog Tagging Filewriter
-**A [Tinylog](http://www.tinylog.org) filewriter extension to remove arbitrary data defined via custom tags from the log entry.**
+# tinylog tagging filewriter
+**A [tinylog](http://www.tinylog.org) filewriter extension to remove arbitrary data defined via custom tags from the log entry.**
 
 The main objective is the use in combination with [tinylog-coloredconsole](https://github.com/tobiasrm/tinylog-coloredconsole), which allows arbitrary colorized logs through custom tags. With *tinylog-tagging-filewriter*, you can remove (or replace) those tags before writing the log to file.
 
 ## Features
-The tinylog-tagging-filewriter extends Tinylog with the `tagging-filewriter` file writer. It allows you to define up to 10 custom tags (an arbitrary string), which are replaced with the corresponding custom parameter. Thus, you can generate some tags in your source-code to further processing (e.g. via the [tinylog-coloredconsole](https://github.com/tobiasrm/tinylog-coloredconsole)) but replaced custom content for file writing.
+The tinylog-tagging-filewriter extends tinylog with the `tagging-filewriter` file writer. It allows you to define up to 10 custom tags (an arbitrary string), which are replaced with the corresponding custom parameter. Thus, you can generate some tags in your source-code to further processing (e.g. via the [tinylog-coloredconsole](https://github.com/tobiasrm/tinylog-coloredconsole)) but replaced custom content for file writing.
 
-The following listing outlines the defition of custom tags/parameters. The example will remove customTag1 and customTag2 before file writing (customTag2 via non-provided content, i.e. being empty, thus reducing config size), while customTag3 is replaced with "==3==".
+The following listing outlines the defition of custom tags/parameters. The example will remove *customTag1* and *customTag2* before file writing (*customTag2* via non-provided content, i.e. being empty, thus reducing config size), while *customTag3* is replaced with "==3==".
  
 ```  
 DEFINITION:
@@ -54,11 +54,11 @@ Add the following dependency to your pom.xml to use the tinylog-tagging-filewrit
 Note: To make sure your IDE takes all files into account (notably the TaggingFileWriter class), clean and rebuild your project.
 
 ## Comments
-- **Versioning**. The versioning uses the original Tinylog versions for clarity about the underlying libary, e.g. tinylog-tagging-filewriter in version 1.3.1 uses Tinylog v1.3.1 (see [pom.xml](https://github.com/tobiasrm/tinylog-tagging-filewriter/blob/master/pom.xml)). If needed, you may simply exclude it and use another Tinylog version.
+- **Versioning**. The versioning uses the original tinylog versions for clarity about the underlying libary, e.g. tinylog-tagging-filewriter in version 1.3.1 uses tinylog v1.3.1 (see [pom.xml](https://github.com/tobiasrm/tinylog-tagging-filewriter/blob/master/pom.xml)). If needed, you may simply exclude it and use another tinylog version.
 
 
-## Other Tinylog writer extensions
-See also my other Tinylog writer extension projects:
+## Other tinylog writer extensions
+See also my other tinylog writer extension projects:
 
 - [tinylog-coloredconsole](https://github.com/tobiasrm/tinylog-coloredconsole) for colored log-level and arbitrary source-code generated data through custom tags 
 - [tinylog-tagging-rollingfilewriter](https://github.com/tobiasrm/tinylog-tagging-rollingfilewriter) extension to remove custom strings (e.g. the tinylog-coloredconsole custom tags) before writing to file (based on rollingfilewriter)
